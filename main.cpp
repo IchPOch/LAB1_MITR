@@ -1,7 +1,8 @@
 #include <iostream>
-#include <vector>
+#include <numeric>
 #include <string>
-
+#include <vector>
+@
 struct Student {
     std::string name;
     int age;
@@ -36,6 +37,21 @@ void displayStudents(const std::vector<Student>& database) {
     }
 }
 
+void MajorDeleate(const std::vector<Student>& database) {
+    if (!database.empty()) {
+        std::string major;
+        std::cin >> major;
+        for (int i = 0; i < database.size(); i++) {
+            if (major == database[i].major) {
+                database.erase(database.begin() + i);
+            }
+        }
+    }
+    else
+    {
+        std::cout << "DataBase empty";
+    }
+}
 int main() {
     std::vector<Student> database;
 
