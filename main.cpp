@@ -2,7 +2,6 @@
 #include <numeric>
 #include <string>
 #include <vector>
-@
 struct Student {
     std::string name;
     int age;
@@ -39,13 +38,7 @@ void displayStudents(const std::vector<Student>& database) {
 
 void MajorDeleate(const std::vector<Student>& database) {
     if (!database.empty()) {
-        std::string major;
-        std::cin >> major;
-        for (int i = 0; i < database.size(); i++) {
-            if (major == database[i].major) {
-                database.erase(database.begin() + i);
-            }
-        }
+
     }
     else
     {
@@ -65,17 +58,17 @@ int main() {
         std::cin >> choice;
 
         switch (choice) {
-            case 1:
-                addStudent(database);
-                break;
-            case 2:
-                displayStudents(database);
-                break;
-            case 0:
-                std::cout << "Выход из программы.\n";
-                break;
-            default:
-                std::cout << "Неверный выбор. Попробуйте снова.\n";
+        case 1:
+            addStudent(database);
+            break;
+        case 2:
+            displayStudents(database);
+            break;
+        case 0:
+            std::cout << "Выход из программы.\n";
+            break;
+        default:
+            std::cout << "Неверный выбор. Попробуйте снова.\n";
         }
     } while (choice != 0);
 
