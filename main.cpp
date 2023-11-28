@@ -42,7 +42,7 @@ void MajorDeleate(const std::vector<Student>& database) {
         std::cin >> major;
         for (int i = 0; i < database.size(); i++) {
             if (major == database[i].major) {
-                
+                database.erase(database.begin() + i);
             }
         }
     }
