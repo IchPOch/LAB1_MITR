@@ -38,6 +38,7 @@ void displayStudents(const std::vector<Student>& database) {
 
 void MajorDeleate(const std::vector<Student>& database) {
     if (!database.empty()) {
+        std::string major;
 
     }
     else
